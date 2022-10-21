@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: "DniproCity-Regular";
+        src: url("./fonts/DniproCity-Regular.otf") format("opentype");
+    }
+
+    @font-face {
+        font-family: "DniproCity-Bold";
+        src: url("./fonts/DniproCity-Bold.otf") format("opentype");
+    }
+
+    @font-face {
+        font-family: "DniproCity-Medium";
+        src: url("./fonts/DniproCity-Medium.otf") format("opentype");
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+        height: 595px;
+    }
+
+    img {
+        position: absolute;
+        object-fit: fill;
+        z-index: -99;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        font-family: DniproCity-Bold;
+        font-size: 40px;
+        margin-left: 35px;
+        padding-top: 270px;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    p {
+        font-family: DniproCity-Regular;
+        font-size: 20px;
+        padding-top: 5px;
+        margin-left: 35px;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    h2 {
+        font-family: DniproCity-Bold;
+        font-size: 40px;
+        margin-left: 35px;
+        padding-top: 140px;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 40px;
+        margin-left: 35px;
+        padding-top: 20px;
+        margin-bottom: 0;
+    }
+</style>
+
+{{#each users}}
+<body>
+<!--<body background="bg.jpg"style="width: 3508px; height: 2480px; background-repeat: no-repeat;">-->
+
+<img src="data:image/png;base64,{{logo}}" alt="">
+<img src="bg.jpg" alt="">
+
+<h1>
+    {{this.surName}} <br/>
+
+    {{this.name}}
+</h1>
+
+<p>
+    {{this.msg}} <br/>
+    та отримав рівень
+</p>
+
+<h3>
+    {{this.rate}}
+</h3>
+
+
+<p>
+    {{this.count}}/30 вірних відповідей
+</p>
+
+{{/each}}
+<!--&lt;!&ndash;<h1>Certificate</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--    {{#each users}}-->
+<!--    <li>Name: {{this.name}}</li>-->
+<!--    <li>Age: {{this.age}}</li>-->
+<!--    <br />-->
+<!--    {{/each}}-->
+<!--</ul>-->
+
+</body>
+</html>
